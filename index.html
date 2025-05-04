@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System</title>
+
+    <!-- Styling CSS -->
+     <style>
+        html,
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            width: 50vw;
+            height: 50vw;
+            color: #333;
+        }
+        .main-container{
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            
+            /* Not a good practice to center the whole container on the UI */
+            margin-left: 55%;
+            margin-top: 10%;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+
+        .add-contact{
+            margin-bottom: 30px;
+            padding-right: 1.2rem;
+            padding-right: 1.2rem;
+        }
+        
+        .add-contact input,
+        .add-contact select{
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .add-contact button{
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .add-contact button:hover{
+            background-color: #45a049;
+        }
+
+        .contact-list{
+            overflow-x: auto;
+        }
+        .contact-list table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .contact-list table th,
+        .contact-list table td{
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        } 
+        .contact-list th{
+            background-color: #4CAF50;
+            color: white;
+        }
+        .contact-list tr:hover{
+            background-color: #f1f1f1;
+        }
+     </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Contact Book</h1>
+        <div class="add-contact"> 
+            <h2>Add Contact</h2>
+            <input type="text" placeholder="Name">
+            <input type="number" placeholder="Phone">
+            <input type="email" placeholder="Email">
+            <select id="label">
+                <option value="Family">Family</option>
+                <option value="Friend">Friend</option>
+                <option value="Business">Business</option>
+                <option value="Work">Work</option>
+            </select>
+            <button>Add Contact</button>
+        </div>
+        <div class="contact-list">
+            <h2>Contact</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Label</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
