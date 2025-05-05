@@ -81,6 +81,18 @@
         .contact-list tr:hover{
             background-color: #f1f1f1;
         }
+
+        /* delete btn in row */
+        button.delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        button.delete-btn:hover {
+            background-color: #d32f2f;
+        }
      </style>
 </head>
 <body>
@@ -88,20 +100,22 @@
         <h1>Contact Book</h1>
         <div class="add-contact"> 
             <h2>Add Contact</h2>
-            <input type="text" placeholder="Name">
-            <input type="number" placeholder="Phone">
-            <input type="email" placeholder="Email">
-            <select id="label">
-                <option value="Family">Family</option>
-                <option value="Friend">Friend</option>
-                <option value="Business">Business</option>
-                <option value="Work">Work</option>
-            </select>
-            <button>Add Contact</button>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Name">
+                <input type="number" id="phone" placeholder="Phone">
+                <input type="email" id="email" placeholder="Email">
+                <select id="label">
+                    <option value="Family">Family</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Business">Business</option>
+                    <option value="Work">Work</option>
+                </select>
+                <button type="submit">Add Contact</button>
+            </form>
         </div>
         <div class="contact-list">
             <h2>Contact</h2>
-            <table>
+            <table id="contactTable">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -117,5 +131,6 @@
             </table>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
